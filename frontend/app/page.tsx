@@ -1,27 +1,19 @@
-import { Header } from "@/components/header"
-import { LiveScores } from "@/components/live-scores"
-import { PredictResult } from "@/components/predict-result"
-import { AIScorePredictor } from "@/components/ai-score-predictor"
-import { PredictionCards } from "@/components/prediction-cards"
-import { NewsPanel } from "@/components/news-panel"
-import { Footer } from "@/components/footer"
+import { Header } from "@/components/layout/header"
+import { HeroSection } from "@/components/landing/hero-section"
+import { HowItWorksSection } from "@/components/landing/how-it-works-section"
+import { SportsPreviewSection } from "@/components/landing/sports-preview-section"
+import { CTASection } from "@/components/landing/cta-section"
+import { Footer } from "@/components/layout/footer"
 
-export default function HomePage() {
+export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className="min-h-screen gradient-bg">
       <Header />
-      <main className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2 space-y-8">
-            <LiveScores />
-            <PredictResult />
-            <AIScorePredictor />
-            <PredictionCards />
-          </div>
-          <div className="lg:col-span-1">
-            <NewsPanel />
-          </div>
-        </div>
+      <main>
+        <HeroSection />
+        <HowItWorksSection />
+        <SportsPreviewSection />
+        <CTASection />
       </main>
       <Footer />
     </div>
